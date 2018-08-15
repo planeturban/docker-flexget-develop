@@ -7,3 +7,4 @@ then
 echo $new > VERSION
 fi 
 git commit -am "automatic: new version"
+git push
