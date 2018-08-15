@@ -1,0 +1,6 @@
+#!/usr/bin/with-contenv bash
+
+pip install -U pip
+if [ ! -z $PIP_PACKAGES ]; then
+	pip install -U $PIP_PACKAGES
+fi
