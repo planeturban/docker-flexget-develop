@@ -5,5 +5,5 @@ new=$(git ls-remote --tags https://github.com/Flexget/Flexget.git | sort -t '/' 
 if [ $v != $new ]
 then
 	img=planeturban/docker-flexget-develop
-	docker login -u $dhu -p $dhp && docker build --no-cache -t $img:$new . && docker tag $img:$new $img:latest && docker push $img && echo $new > VERSION && git tag $new ; git commit -am "automatic: new version"; git push
+	docker login -u $dhu -p $dhp && docker build --no-cache -t $img:$new . && docker tag $img:$new $img:latest && docker push $img && echo $new > VERSION && git tag $new ; git commit VERSION -m "automatic: new version"; git push
 fi 
